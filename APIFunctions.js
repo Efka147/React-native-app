@@ -88,6 +88,7 @@ export const getVideoByID = async (movieId) => {
       const data = await response.json();
       return data.results[0];
     } else {
+      throw error;
     }
   } catch (error) {
     console.error(error);
