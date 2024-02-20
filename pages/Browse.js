@@ -41,7 +41,7 @@ export default function Browse({ navigation }) {
   };
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView style={styles.scrollContainer}>
         <Text style={styles.headers}>Upcoming Movies</Text>
         <ScrollView horizontal>
           {upcommingMovies.map((movie) => (
@@ -93,25 +93,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    justifyContent: "center",
+  },
+  scrollContainer: {
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+  },
+  headers: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#333",
+    marginTop: 10,
+    marginBottom: 5,
   },
   images: {
     width: 170,
     height: 250,
-    marginRight: 15,
+    marginRight: 10,
     resizeMode: "stretch",
-  },
-  lists: {
-    paddingVertical: 10,
-    paddingHorizontal: 5,
-  },
-  headers: {
-    fontSize: 24, // Adjust the font size as needed
-    fontWeight: "bold", // Make the text bold
-    color: "#333", // Set the text color
-    marginTop: 20, // Add some top margin to separate it from other content
-    marginBottom: 10, // Add some bottom margin for spacing
-    marginLeft: 20,
-    textAlign: "left",
+    borderRadius: 10,
   },
 });
